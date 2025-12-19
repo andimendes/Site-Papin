@@ -9,8 +9,8 @@ const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop" 
-          alt="Ambiente de restaurante sofisticado" 
+          src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop" 
+          alt="Ambiente de restaurante próspero e sofisticado" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/50"></div>
@@ -52,26 +52,26 @@ const Hero: React.FC = () => {
 
       {/* Video Modal */}
       {isVideoOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm transition-opacity duration-300">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 p-4 backdrop-blur-md transition-opacity duration-300">
           <div className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
             <button 
               onClick={() => setIsVideoOpen(false)}
-              className="absolute top-4 right-4 z-20 text-white/80 hover:text-white bg-black/50 hover:bg-orange-600 rounded-full p-2 transition-all"
+              className="absolute top-4 right-4 z-50 text-white/80 hover:text-white bg-black/60 hover:bg-orange-600 rounded-full p-2 transition-all backdrop-blur-sm"
               aria-label="Fechar vídeo"
             >
               <X size={24} />
             </button>
             <iframe 
               className="w-full h-full" 
-              src="https://www.youtube.com/embed/99rIRdlO8F4?autoplay=1&rel=0&modestbranding=1&showinfo=0" 
-              title="Papin Contabilidade Vídeo Institucional"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              src="https://www.youtube.com/embed/99rIRdlO8F4?rel=0" 
+              title="Papin Contabilidade - Vídeo Institucional"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               allowFullScreen
             ></iframe>
           </div>
           {/* Close on click outside */}
           <div 
-            className="absolute inset-0 z-10" 
+            className="absolute inset-0 z-40" 
             onClick={() => setIsVideoOpen(false)}
           ></div>
         </div>
